@@ -18,10 +18,10 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
-        boolean isAuthenticated = authService.authUser(loginRequest.getUserid(), loginRequest.getPassword());
+        boolean isAuthenticated = authService.authUser(loginRequest.getEmail(), loginRequest.getPassword());
         if (isAuthenticated) {
             LoginResponse response = new LoginResponse();
-            response.setUserid(loginRequest.getUserid());
+            response.setUserid(loginRequest.getEmail());
             return new ResponseEntity<>(response, HttpStatus.OK);
 
             // return ResponseEntity.ok("Login successful");

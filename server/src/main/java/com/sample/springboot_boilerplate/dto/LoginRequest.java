@@ -1,16 +1,16 @@
 package com.sample.springboot_boilerplate.dto;
 
 public class LoginRequest {
-    private String userid;
+    private String email;
     private String password;
 
     // Getters and setters
-    public String getUserid() {
-        return userid;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
